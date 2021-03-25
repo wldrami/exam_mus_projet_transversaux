@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<!-- Fragment #1 : Headerfiles contains css and js references -->
+<head th:fragment="headerfiles">
+<meta charset="ISO-8859-1">
+<link href="eimage/favicon.png" rel="icon" />
+<title>Ecommerce</title>
+<link th:href="@{~/bootstrap.min.css}" rel="stylesheet">
+<link th:href="@{~/fontawesome/css/all.css}" rel="stylesheet">
+<title>Checkout</title>
+<meta name="description" content="Responsive and clean html template design for any kind of ecommerce webshop">
+<!-- CSS Part Start-->
+<link th:href="@{~/fontawesome/css/all.css}" rel="stylesheet">
+
+<link th:href="@{~/ejs/bootstrap/css/bootstrap.min.css}" rel="stylesheet">
+<link th:href="@{~/ecss/font-awesome/css/font-awesome.min.css}" rel="stylesheet">
+<link th:href="@{~/ecss/stylesheet.css}" rel="stylesheet">
+<link th:href="@{~/ecss/owl.carousel.css}" rel="stylesheet">
+<link th:href="@{~/ecss/owl.transitions.css}" rel="stylesheet">
+<link th:href="@{~/ecss/responsive.css}" rel="stylesheet">
+<link th:href="@{~/ecss/stylesheet-skin2.css}" rel="stylesheet">
+<link rel='stylesheet' href='//fonts.googleapis.com/css?family=Droid+Sans' type='text/css'>
+<!-- CSS Part End-->
+</head>
+<body>
+
+
+
+
+<div th:fragment="nav">
+  <div id="header">
+    <!-- Top Bar Start-->
+    <nav id="top" class="htop">
+      <div class="container">
+        <div class="row"> <span class="drop-icon visible-sm visible-xs"><i class="fa fa-align-justify"></i></span>
+          <div class="pull-left flip left-top">
+            <div class="links">
+              <ul>
+                <li class="mobile"><i class="fa fa-phone"></i>+91 9898777656</li>
+                <li class="email"><a href="mailto:info@marketshop.com"><i class="fa fa-envelope"></i>info@marketshop.com</a></li>
+                <li class="wrap_custom_block hidden-sm hidden-xs"><b><a href="/contacter">contacter nous</b></a>
+                
+                
+                
+                
+                
+                
+                  <div class="dropdown-menu custom_block">
+                    <ul>
+                      <li>
+                        <table>
+                          <tbody>
+                            <tr>
+                              <td><img alt="" src="image/banner/cms-block.jpg"></td>
+                              <td><img alt="" src="image/banner/responsive.jpg"></td>
+                            </tr>
+                            <tr>
+                              <td><h4>CMS Blocks</h4></td>
+                              <td><h4>Responsive Template</h4></td>
+                            </tr>
+                            <tr>
+                              <td>This is a CMS block. You can insert any content (HTML, Text, Images) Here.</td>
+                              <td>This is a CMS block. You can insert any content (HTML, Text, Images) Here.</td>
+                            </tr>
+                            <tr>
+                              <td><strong><a class="btn btn-default btn-sm" href="#">Read More</a></strong></td>
+                              <td><strong><a class="btn btn-default btn-sm" href="#">Read More</a></strong></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div id="language" class="btn-group">
+              <button class="btn-link dropdown-toggle" data-toggle="dropdown"> <span> <img src="image/flags/gb.png" alt="English" title="English">English <i class="fa fa-caret-down"></i></span></button>
+              <ul class="dropdown-menu">
+                <li>
+                  <button class="btn btn-link btn-block language-select" type="button" name="GB"><img src="image/flags/gb.png" alt="English" title="English" /> English</button>
+                </li>
+                <li>
+                  <button class="btn btn-link btn-block language-select" type="button" name="GB"><img src="image/flags/ar.png" alt="Arabic" title="Arabic" /> Arabic</button>
+                </li>
+              </ul>
+            </div>
+            <div id="currency" class="btn-group">
+              <button class="btn-link dropdown-toggle" data-toggle="dropdown"> <span> $ USD <i class="fa fa-caret-down"></i></span></button>
+              <ul class="dropdown-menu">
+                <li>
+                  <button class="currency-select btn btn-link btn-block" type="button" name="EUR">€ Euro</button>
+                </li>
+                <li>
+                  <button class="currency-select btn btn-link btn-block" type="button" name="GBP">£ Pound Sterling</button>
+                </li>
+                <li>
+                  <button class="currency-select btn btn-link btn-block" type="button" name="USD">$ US Dollar</button>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div id="top-links" class="nav pull-right flip">
+            <ul>
+            	<form class="form-inline my-2 my-lg-0" form-method="post"
+					th:action="@{/logout}">
+       
+							<button sec:authorize="isAuthenticated()"
+						class="btn btn-outline-danger my-2 my-sm-0 btn-sm" type="submit">Logout</button>
+					<button sec:authorize="isAnonymous()" th:href="@{~/login}"
+							class="btn btn-outline-danger my-2 my-sm-0 btn-sm" type="submit">Login</button>
+						</form>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- Top Bar End-->
+    <!-- Header Start-->
+    <header class="header-row">
+      <div class="container">
+        <div class="table-container">
+          <!-- Logo Start -->
+          <div class="col-table-cell col-lg-6 col-md-6 col-sm-12 col-xs-12 inner">
+            <div id="logo"><a href="index.html"><img class="img-responsive" src="image/logo.png" title="MarketShop" alt="MarketShop" /></a></div>
+          </div>
+          <!-- Logo End -->
+          <!-- Mini Cart Start-->
+          <div class="col-table-cell col-lg-3 col-md-3 col-sm-6 col-xs-12">
+            <div id="cart">
+              <button type="button" data-toggle="dropdown" data-loading-text="Loading..." class="heading dropdown-toggle">
+              <span ></span>
+              <span id="cart-total">
+              
+              
+              
+           <a href="#"  th:href="@{/profile/cart-product}"><i class="cart-icon pull-left flip"></i></a>
+			
+       
+			
+			
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              </span></button>
+              <ul class="dropdown-menu">
+                <li>
+                  <table class="table">
+                    <tbody>
+                      
+                        
+                      
+                      
+                      
+                    </tbody>
+                  </table>
+                </li>
+                <li>
+                  <div>
+                    <table class="table table-bordered">
+                      <tbody>
+                      
+                      
+                      
+                      
+                      
+                      
+               
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                      </tbody>
+                    </table>
+                    <p class="checkout"><a href="cart.html" class="btn btn-primary"><i class="fa fa-shopping-cart"></i> View Cart</a>&nbsp;&nbsp;&nbsp;<a href="checkout.html" class="btn btn-primary"><i class="fa fa-share"></i> Checkout</a></p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- Mini Cart End-->
+          <!-- Search Start-->
+          <div class="col-table-cell col-lg-3 col-md-3 col-sm-6 col-xs-12 inner">
+            <div id="search" class="input-group">
+            
+
+ 
+    <form id="formSearch">
+        <input type="text" name="search" id="inputSearch" placeholder="Search" class="form-control input-lg"  />
+        <input type="button" value="Search" onclick="test()" class="button-search"  />
+        <div th:if="${not #lists.isEmpty(search)}">
+            <h2>Students List</h2>
+            <table class="table table-striped">
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Surname</th>
+                </tr>
+                <tr th:each="product: ${search}">
+                    <td th:text="${product.productId}"><a href="/getPro/${product.productId}">idStudent</a></td>
+                    <td th:text="${product.productName}">name</td>
+                    <td th:text="${product.productPrice}">surname</td>
+          
+                  </tr>
+                  
+                
+               
+                 
+                </div>
+              </div>
+            </table>
+        </div>
+    </form>
+</div>
+		
+		<script>
+		function test(){
+			var form = document.getElementById("formSearch");
+			var inputSearch = document.getElementById("inputSearch").value;
+			
+			if(inputSearch.trim() == '' || inputSearch == null )
+				form.action = "/index";
+			else
+				form.action= "/products/"+inputSearch;
+				
+			form.submit();
+		}
+		</script>
+		
+		
+		
+		
+		
+		
+		
+	
+
+
+
+ </div>
+
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+           </div>
+          </div>
+          <!-- Search End-->
+           
+		</div>
+       
+     
+    </header>
+    <!-- Header End-->
+    <!-- Main Menu Start-->
+    
+     
+    
+    <!-- Main Menu End-->
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<!-- Fragment #2 : Navbar contains nav links -->
+	
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+			<div class="container">
+			<a class="navbar-brand" href="#">Ecommerce</a>
+
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item"><a class="nav-link" href="#"
+						th:href="@{/index}"><i class="fa fa-home mr-2"></i>Home</a></li>
+					<li sec:authorize="hasRole('ROLE_ADMIN')" class="nav-item"><a
+						class="nav-link" href="#" th:href="@{/admin/index}">Admin</a></li>
+					
+					
+						
+					<li sec:authorize="hasAnyRole('ROLE_MANAGER','ROLE_ADMIN')"
+						class="nav-item"><a class="nav-link" href="#"
+						th:href="@{/manager/index}">Management</a></li>
+						
+							
+				</ul>
+				<ul class="nav my-auto mr-4">
+					<li class="nav-item"><a href="#" class="text-info" th:href="@{/profile/cart-product}"><i class="fas fa-shopping-cart"></i></a></li>
+				</ul>
+			
+			</div>
+			</div>
+		</nav>
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

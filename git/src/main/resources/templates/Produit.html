@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head th:insert="fragments.html :: headerfiles">
+<meta charset="UTF-8" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<link href="eimage/favicon.png" rel="icon" />
+<header th:insert="fragments.html :: nav"></header>
+<title>Produits</title>
+<meta name="description" content="Responsive and clean html template design for any kind of ecommerce webshop">
+<!-- CSS Part Start-->
+<link rel="stylesheet" type="text/css" href="ejs/bootstrap/css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="ecss/font-awesome/css/font-awesome.min.css" />
+<link rel="stylesheet" type="text/css" href="ecss/stylesheet.css" />
+<link rel="stylesheet" type="text/css" href="ecss/owl.carousel.css" />
+<link rel="stylesheet" type="text/css" href="ecss/owl.transitions.css" />
+<link rel="stylesheet" type="text/css" href="ejs/swipebox/src/css/swipebox.min.css">
+<link rel="stylesheet" type="text/css" href="ecss/responsive.css" />
+<link rel="stylesheet" type="text/css" href="ecss/stylesheet-skin2.css" />
+<link rel='stylesheet' href='//fonts.googleapis.com/css?family=Droid+Sans' type='text/css'>
+<!-- CSS Part End-->
+</head>
+<body>
+<div class="wrapper-wide">
+  
+  
+      <!-- Breadcrumb Start-->
+      <ul class="breadcrumb">
+        <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="index.html" itemprop="url"><span itemprop="title"><i class="fa fa-home"></i></span></a></li>
+        <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="category.html" itemprop="url"><span itemprop="title">Nom_category ici</span></a></li>
+        <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="product.html" itemprop="url"><span itemprop="title">Nom_de produit ici</span></a></li>
+      </ul>
+      <!-- Breadcrumb End-->
+      <div class="row">
+        <!--Middle Part Start-->
+        <div id="content" class="col-sm-9">
+          <div itemscope itemtype="http://schema.org/Product">
+            <h1 class="title" itemprop="name">Nom_produit ici</h1>
+            <div class="row product-info">
+              <div class="col-sm-6">
+                <div class="image"><img class="img-responsive" itemprop="image" id="zoom_01" src="image/product/macbook_air_1-350x525.jpg" title="Laptop Silver black" alt="Laptop Silver black" data-zoom-image="image/product/macbook_air_1-600x900.jpg" /> </div>
+                <div class="center-block text-center"><span class="zoom-gallery"><i class="fa fa-search"></i> Clicker sur image pour galerie</span></div>
+                <div class="image-additional" id="gallery_01"> <a class="thumbnail" href="#" data-zoom-image="image/product/macbook_air_1-600x900.jpg" data-image="image/product/macbook_air_1-350x525.jpg" title="Laptop Silver black"> <img src="image/product/macbook_air_1-66x99.jpg" title="Laptop Silver black" alt = "Laptop Silver black"/></a> <a class="thumbnail" href="#" data-zoom-image="image/product/macbook_air_4-600x900.jpg" data-image="image/product/macbook_air_4-350x525.jpg" title="Laptop Silver black"><img src="image/product/macbook_air_4-66x99.jpg" title="Laptop Silver black" alt="Laptop Silver black" /></a> <a class="thumbnail" href="#" data-zoom-image="image/product/macbook_air_2-600x900.jpg" data-image="image/product/macbook_air_2-350x525.jpg" title="Laptop Silver black"><img src="image/product/macbook_air_2-66x99.jpg" title="Laptop Silver black" alt="Laptop Silver black" /></a> <a class="thumbnail" href="#" data-zoom-image="image/product/macbook_air_3-600x900.jpg" data-image="image/product/macbook_air_3-350x525.jpg" title="Laptop Silver black"><img src="image/product/macbook_air_3-66x99.jpg" title="Laptop Silver black" alt="Laptop Silver black" /></a> </div>
+              </div>
+              <div class="col-sm-6">
+                <ul class="list-unstyled description">
+                  <!-- <li><b>Brand:</b> <a href="#"><span itemprop="brand">Apple</span></a></li> -->
+                  <li><b>ID Produit:</b> <span itemprop="mpn">id produit ici</span></li>
+                  <!-- <li><b>Reward Points:</b> 700</li> -->
+                  
+                  
+                  
+ 
+                  
+                   
+                  
+                  
+                  
+                  
+                   
+                  
+                  
+                  
+                  <li><b>Availability:</b> <span class="instock">In Stock</span></li>
+                </ul>
+                <ul class="price-box">
+                  <li class="price" itemprop="offers" itemscope itemtype="http://schema.org/Offer"><span class="price-old">3 000 DHS</span> <span itemprop="price">2 999 DHS<span itemprop="availability" content="In Stock"></span></span></li>
+                  <li></li>
+                  <!-- <li>Ex Tax: $950.00</li> -->
+                </ul>
+                <div id="product">
+                  <h3 class="subtitle">Autre choix </h3>
+                  <div class="form-group required">
+                    <label class="control-label">Coleur</label>
+                    <select class="form-control" id="input-option200" name="option[200]">
+                      <option value=""> --- SVP Selectioner --- </option>
+                      <option value="4">NOIRE </option>
+                      <option value="3">BLANCHE </option>
+            
+                    </select>
+                  </div>
+                  <div class="cart">
+                    <div>
+                      <div class="qty">
+                        <label class="control-label" for="input-quantity">Quantité</label>
+                        <input type="text" name="quantity" value="1" size="2" id="input-quantity" class="form-control" />
+                        <a class="qtyBtn plus" href="javascript:void(0);">+</a><br />
+                        <a class="qtyBtn mines" href="javascript:void(0);">-</a>
+                        <div class="clear"></div>
+                      </div>
+                      <button type="button" id="button-cart" class="btn btn-primary btn-lg">Ajouter sur panier</button>
+                    </div>
+                    <div>
+                      <button type="button" class="wishlist" onClick=""><i class="fa fa-heart"></i> Add to Wish List</button>
+                      <br />
+                      <button type="button" class="wishlist" onClick=""><i class="fa fa-exchange"></i> comparer ce produit</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="rating" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
+                  <meta itemprop="ratingValue" content="0" />
+                  <p><span class="fa fa-stack"><i class="fa fa-star fa-stack-1x"></i><i class="fa fa-star-o fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star fa-stack-1x"></i><i class="fa fa-star-o fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star fa-stack-1x"></i><i class="fa fa-star-o fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star fa-stack-1x"></i><i class="fa fa-star-o fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i></span> <a onClick="$('a[href=\'#tab-review\']').trigger('click'); return false;" href=""><span itemprop="reviewCount">1 reviews</span></a> / <a onClick="$('a[href=\'#tab-review\']').trigger('click'); return false;" href="">Write a review</a></p>
+                </div>
+                <hr>
+                <!-- AddThis Button BEGIN -->
+                <div class="addthis_toolbox addthis_default_style"> <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a> <a class="addthis_button_tweet"></a> <a class="addthis_button_google_plusone" g:plusone:size="medium"></a> <a class="addthis_button_pinterest_pinit" pi:pinit:layout="horizontal" pi:pinit:url="http://www.addthis.com/features/pinterest" pi:pinit:media="http://www.addthis.com/cms-content/images/features/pinterest-lg.png"></a> <a class="addthis_counter addthis_pill_style"></a> </div>
+                <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-514863386b357649"></script>
+                <!-- AddThis Button END -->
+              </div>
+            </div>
+            <ul class="nav nav-tabs">
+              <li class="active"><a href="#tab-description" data-toggle="tab">Description</a></li>
+              <li><a href="#tab-specification" data-toggle="tab">Specification</a></li>
+              <li><a href="#tab-review" data-toggle="tab">Reviews (2)</a></li>
+            </ul>
+            <div class="tab-content">
+              <div itemprop="description" id="tab-description" class="tab-pane active">
+                <div>
+                  <p><b>Description 1</b></p>
+                  <p>description 2.</p>
+                  <p><b>description 3</b></p>
+                  <p>description 4.</p>
+                  
+                </div>
+              </div>
+              <div id="tab-specification" class="tab-pane">
+                <div id="tab-specification" class="tab-pane">
+                <table class="table table-bordered">
+                  <thead>
+                    <tr>
+                      <td colspan="2"><strong>Memory</strong></td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>test 1</td>
+                      <td>8gb</td>
+                    </tr>
+                  </tbody>
+                  </table>
+                <table class="table table-bordered">
+                <thead>
+                    <tr>
+                      <td colspan="2"><strong>Processor</strong></td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>No. of Cores</td>
+                      <td>1</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              </div>
+              <div id="tab-review" class="tab-pane">
+                <form class="form-horizontal">
+                  <div id="review">
+                    <div>
+                      <table class="table table-striped table-bordered">
+                        <tbody>
+                          <tr>
+                            <td style="width: 50%;"><strong><span>Nom_utilisateur</span></strong></td>
+                            <td class="text-right"><span>Date_review</span></td>
+                          </tr>
+                          <tr>
+                            <td colspan="2"><p>(text review)Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                              <div class="rating"> <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i><i class="fa fa-star-o fa-stack-2x"></i></span> <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i><i class="fa fa-star-o fa-stack-2x"></i></span> <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i><i class="fa fa-star-o fa-stack-2x"></i></span> <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i><i class="fa fa-star-o fa-stack-2x"></i></span> <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i><i class="fa fa-star-o fa-stack-2x"></i></span> </div></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <table class="table table-striped table-bordered">
+                        <tbody>
+                          <tr>
+                            <td style="width: 50%;"><strong><span>Nom_utilisateur 2</span></strong></td>
+                            <td class="text-right"><span>date_review</span></td>
+                          </tr>
+                          <tr>
+                            <td colspan="2"><p>(text review )Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                              <div class="rating"> <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i><i class="fa fa-star-o fa-stack-2x"></i></span> <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i><i class="fa fa-star-o fa-stack-2x"></i></span> <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i><i class="fa fa-star-o fa-stack-2x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span> </div></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <div class="text-right"></div>
+                  </div>
+                  <h2>Ecrire un review</h2>
+                  <div class="form-group required">
+                    <div class="col-sm-12">
+                      <label for="input-name" class="control-label">Nom & Prenom</label>
+                      <input type="text" class="form-control" id="input-name" value="" name="name">
+                    </div>
+                  </div>
+                  <div class="form-group required">
+                    <div class="col-sm-12">
+                      <label for="input-review" class="control-label"> Review (fedback)</label>
+                      <textarea class="form-control" id="input-review" rows="5" name="text"></textarea>
+                      <div class="help-block"><span class="text-danger">Note:</span> B2B c est le future de commerce au maroc !</div>
+                    </div>
+                  </div>
+                  <div class="form-group required">
+                    <div class="col-sm-12">
+                      <label class="control-label">Avis</label>
+                      &nbsp;&nbsp;&nbsp; Négatif&nbsp;
+                      <input type="radio" value="1" name="rating">
+                      &nbsp;
+                      <input type="radio" value="2" name="rating">
+                      &nbsp;
+                      <input type="radio" value="3" name="rating">
+                      &nbsp;
+                      <input type="radio" value="4" name="rating">
+                      &nbsp;
+                      <input type="radio" value="5" name="rating">
+                      &nbsp;Positif</div>
+                  </div>
+                  <div class="buttons">
+                    <div class="pull-right">
+                      <button class="btn btn-primary" id="button-review" type="button">Continue</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+            
+        <!--Right Part End -->
+      </div>
+    </div>
+  </div>
+  <!--Footer Start-->
+  <<footer id="footer">
+    <div class="fpart-first">
+      <div class="container">
+        <div class="row">
+          <div class="contact col-lg-4 col-md-4 col-sm-12 col-xs-12">
+            <h5>B2b.ma /</h5>
+            <p>b2b c'est le future de commerce local au maroc.</p>
+            <img alt="" src="image/logo.png">
+          </div>
+          <div class="column col-lg-2 col-md-2 col-sm-3 col-xs-12">
+            <h5>Information</h5>
+            <ul>
+              <li><a href="about-us.html">About Us</a></li>
+              <li><a href="about-us.html">Delivery Information</a></li>
+              <li><a href="about-us.html">Privacy Policy</a></li>
+              <li><a href="about-us.html">Terms &amp; Conditions</a></li>
+            </ul>
+          </div>
+          <div class="column col-lg-2 col-md-2 col-sm-3 col-xs-12">
+            <h5>nos Services</h5>
+            <ul>
+              <li><a href="contact-us.html">cantacter-nous</a></li>
+              <li><a href="#">Returns</a></li>
+              <li><a href="sitemap.html">Site Map</a></li>
+            </ul>
+          </div>
+          <div class="column col-lg-2 col-md-2 col-sm-3 col-xs-12">
+            <h5>Extras</h5>
+            <ul>
+              <li><a href="#">Brands</a></li>
+              <li><a href="#">Gift Vouchers</a></li>
+              <li><a href="#">Affiliates</a></li>
+              <li><a href="#">Specials</a></li>
+            </ul>
+          </div>
+          <div class="column col-lg-2 col-md-2 col-sm-3 col-xs-12">
+            <h5>Mon Compte</h5>
+            <ul>
+              <li><a href="#">Mon compte</a></li>
+              <li><a href="#">mon achats</a></li>
+              <li><a href="#">Wish List</a></li>
+              <li><a href="#">Newsletter</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="fpart-second">
+      <div class="container">
+        <div id="powered" class="clearfix">
+          <div class="powered_text pull-left flip">
+            <p>b2b Ecommerce  © 2021 | Template By Ayoub benyassine & youssef rami</a></p>
+          </div>
+          <div class="social pull-right flip"> <a href="#" target="_blank"> <img data-toggle="tooltip" src="image/socialicons/facebook.png" alt="Facebook" title="Facebook"></a> <a href="#" target="_blank"> <img data-toggle="tooltip" src="image/socialicons/twitter.png" alt="Twitter" title="Twitter"> </a> <a href="#" target="_blank"> <img data-toggle="tooltip" src="image/socialicons/google_plus.png" alt="Google+" title="Google+"> </a> <a href="#" target="_blank"> <img data-toggle="tooltip" src="image/socialicons/pinterest.png" alt="Pinterest" title="Pinterest"> </a> <a href="#" target="_blank"> <img data-toggle="tooltip" src="image/socialicons/rss.png" alt="RSS" title="RSS"> </a> </div>
+        </div>
+        <div class="bottom-row">
+          <div class="custom-text text-center">
+            <p>b2b c'est le future de commerce local au maroc.<br> b2b c'est le future de commerce local au maroc.</p>
+          </div>
+          <div class="payments_types"> <a href="#" target="_blank"> <img data-toggle="tooltip" src="image/payment/payment_paypal.png" alt="paypal" title="PayPal"></a> <a href="#" target="_blank"> <img data-toggle="tooltip" src="image/payment/payment_american.png" alt="american-express" title="American Express"></a> <a href="#" target="_blank"> <img data-toggle="tooltip" src="image/payment/payment_2checkout.png" alt="2checkout" title="2checkout"></a> <a href="#" target="_blank"> <img data-toggle="tooltip" src="image/payment/payment_maestro.png" alt="maestro" title="Maestro"></a> <a href="#" target="_blank"> <img data-toggle="tooltip" src="image/payment/payment_discover.png" alt="discover" title="Discover"></a> <a href="#" target="_blank"> <img data-toggle="tooltip" src="image/payment/payment_mastercard.png" alt="mastercard" title="MasterCard"></a> </div>
+        </div>
+      </div>
+    </div>
+    <div id="back-top"><a data-toggle="tooltip" title="Back to Top" href="javascript:void(0)" class="backtotop"><i class="fa fa-chevron-up"></i></a></div>
+  </footer>
+  <!--Footer End-->
+  <!-- Twitter Side Block Start -->
+  <div id="twitter_footer" class="twit-right sort-order-1">
+    <div class="twitter_icon"><i class="fa fa-twitter"></i></div>
+    <a class="twitter-timeline" href="https://twitter.com/" data-chrome="nofooter noscrollbar transparent" data-theme="light" data-tweet-limit="2" data-related="twitterapi,twitter" data-aria-polite="assertive" data-widget-id="347621595801608192">Tweets by @</a>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+  </div>
+  <!-- Twitter Side Block End -->
+  <!-- Facebook Side Block Start -->
+  <div id="facebook" class="fb-right sort-order-2">
+    <div class="facebook_icon"><i class="fa fa-facebook"></i></div>
+    <div class="fb-page" data-href="" data-small-header="true" data-adapt-container-width="true" data-hide-cover="true" data-show-facepile="true" data-show-posts="false">
+      <div class="fb-xfbml-parse-ignore">
+        <blockquote cite=""><a href="">MUSQL</a></blockquote>
+      </div>
+    </div>
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.4";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+  </div>
+  <!-- Facebook Side Block End -->
+</div>
+<!-- JS Part Start-->
+<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="js/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/jquery.easing-1.3.min.js"></script>
+<script type="text/javascript" src="js/jquery.dcjqaccordion.min.js"></script>
+<script type="text/javascript" src="js/owl.carousel.min.js"></script>
+<script type="text/javascript" src="js/jquery.elevateZoom-3.0.8.min.js"></script>
+<script type="text/javascript" src="js/swipebox/lib/ios-orientationchange-fix.js"></script>
+<script type="text/javascript" src="js/swipebox/src/js/jquery.swipebox.min.js"></script>
+<script type="text/javascript" src="js/custom.js"></script>
+<script type="text/javascript">
+// Elevate Zoom for Product Page image
+$("#zoom_01").elevateZoom({
+	gallery:'gallery_01',
+	cursor: 'pointer',
+	galleryActiveClass: 'active',
+	imageCrossfade: true,
+	zoomWindowFadeIn: 500,
+	zoomWindowFadeOut: 500,
+	lensFadeIn: 500,
+	lensFadeOut: 500,
+	loadingIcon: 'image/progress.gif'
+	}); 
+//////pass the images to swipebox
+$("#zoom_01").bind("click", function(e) {
+  var ez =   $('#zoom_01').data('elevateZoom');
+	$.swipebox(ez.getGalleryList());
+  return false;
+});
+</script>
+<!-- JS Part End-->
+</body>
+</html>
